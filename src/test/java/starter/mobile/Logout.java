@@ -1,33 +1,79 @@
 package starter.mobile;
 
-import io.appium.java_client.AppiumBy;
+import com.github.javafaker.Faker;
 import io.appium.java_client.MobileBy;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
 import automation.pageobject.BasePageObject;
 
+import java.util.Locale;
+
 public class Logout extends BasePageObject {
 
-    private By accountButton() {
-        return MobileBy.xpath("//android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[3]");
-//        return AppiumBy.id("//android.view.View[@content-desc=\"Akun Tab 5 of 5\"]");
+    private By loginPages() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Masuk ke Akun\"]");
     }
-    private By logoutButton() {
+    private By emailField() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[1]");
+    }
+    private By passwordField() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[2]");
+    }
+    private By buttonLogin() {
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Masuk\"]");
+    }
+    private By passwordVerification() {
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Lain Kali\"]");
+    }
+    private By homepages() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Selamat Pagi\"]");
+    }
+    private By buttonAccount() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Akun\n" +
+                "Tab 5 of 5\"]");
+//        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[3]");
+    }
+    private By buttonLogout() {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Keluar\"]");
     }
-    @Step("Given I already on the home page")
-    public void onTheHomepage(){
+
+    Faker faker = new Faker(new Locale("in-ID"));
+    String email = "wiyanalta@gmail.com";
+    String password = "@Alta123";
+
+    @Step
+    public void loginPage() {
+        waitUntilPresence(loginPages());
+    }
+    @Step
+    public void fillEmailField() {
+        onClick(emailField());
+        waitUntilPresence(emailField()).sendKeys(email);
+    }
+    @Step
+    public void fillPasswordField() {
+        onClick(passwordField());
+        waitUntilPresence(passwordField()).sendKeys(password);
+    }
+    @Step
+    public void loginButton() {
+        onClick(buttonLogin());
 
     }
-
-    @Step("I click account button")
-    public void clickAccountButton() {
-        waitUntilPresence(accountButton());
-        onClick(accountButton());
+    @Step
+    public void verifyPassword() {
+        onClick(passwordVerification());
     }
-    @Step("I click logout button")
-    public void clickLogoutButton() {
-        waitUntilPresence(logoutButton());
-        onClick(logoutButton());
+    @Step
+    public void homepage() {
+        onClick(homepages());
+    }
+    @Step
+    public void accountButton() {
+        onClick(buttonAccount());
+    }
+    @Step
+    public void logoutButton() {
+        onClick(buttonLogout());
     }
 }

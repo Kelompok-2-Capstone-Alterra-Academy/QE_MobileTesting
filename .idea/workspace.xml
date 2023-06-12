@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f3f2734-ff5c-447d-b45e-453aea518574" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/ProfileButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ProfileButtonSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/3-Profile Button.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/app-release.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/Logout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LogoutSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LogoutSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/1-Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/1-Login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/2-Logout.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/2-Logout.feature" afterDir="false" />
-    </list>
+    <list default="true" id="9f3f2734-ff5c-447d-b45e-453aea518574" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

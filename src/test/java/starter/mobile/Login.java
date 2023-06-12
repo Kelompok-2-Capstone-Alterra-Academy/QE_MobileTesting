@@ -1,13 +1,11 @@
 package starter.mobile;
 
-import com.github.javafaker.Faker;
 import io.appium.java_client.MobileBy;
 import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import automation.pageobject.BasePageObject;
 
-import java.util.Locale;
 
 public class Login extends BasePageObject {
 
@@ -42,7 +40,6 @@ public class Login extends BasePageObject {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Selamat Pagi\"]");
     }
 
-    Faker faker = new Faker(new Locale("in-ID"));
     String email = "wiyanalta@gmail.com";
     String emailIncorrect = "wiyan.com";
     String emailUnregister = "wiyan@alta.com";

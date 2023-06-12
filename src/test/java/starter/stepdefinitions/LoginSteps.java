@@ -101,17 +101,14 @@ public class LoginSteps {
     public void onLoginPage() {
         login.loginPage();
     }
-
     @When("I fill email field with incorrect email")
     public void fillEmailFieldWithIncorrectEmail() {
         login.fillIncorrectEmailField();
     }
-
     @And("I fill password field with correct password")
     public void fillPasswordFieldWithCorrectPassword() {
         login.fillPasswordField();
     }
-
     @Then("I click at the login button")
     public void clickAtTheLoginButton() {
         login.loginButton();
@@ -155,5 +152,4 @@ public class LoginSteps {
         login.loginButton();
         login.verifyPasswordEmpty();
     }
-
 }

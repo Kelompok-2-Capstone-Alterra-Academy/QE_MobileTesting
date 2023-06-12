@@ -1,12 +1,9 @@
 package starter.mobile;
 
-import com.github.javafaker.Faker;
 import io.appium.java_client.MobileBy;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
 import automation.pageobject.BasePageObject;
-
-import java.util.Locale;
 
 public class Logout extends BasePageObject {
 
@@ -37,7 +34,6 @@ public class Logout extends BasePageObject {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Keluar\"]");
     }
 
-    Faker faker = new Faker(new Locale("in-ID"));
     String email = "wiyanalta@gmail.com";
     String password = "@Alta123";
 
@@ -58,7 +54,6 @@ public class Logout extends BasePageObject {
     @Step
     public void loginButton() {
         onClick(buttonLogin());
-
     }
     @Step
     public void verifyPassword() {

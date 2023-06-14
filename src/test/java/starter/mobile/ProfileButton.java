@@ -25,12 +25,15 @@ public class ProfileButton extends BasePageObject {
     private By homepages() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Selamat Pagi\"]");
     }
+    private By buttonProfile() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[3]");
+    }
+    private By arrowBack() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
+    }
     private By accountButton() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Akun\n" +
                 "Tab 5 of 5\"]");
-    }
-    private By buttonProfile() {
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[3]");
     }
 
     String email = "wiyanalta@gmail.com";
@@ -65,6 +68,10 @@ public class ProfileButton extends BasePageObject {
     @Step
     public void topRightCorner() {
         onClick(buttonProfile());
+    }
+    @Step
+    public void backArrowHomepage() {
+        onClick(arrowBack());
     }
     @Step
     public void bottomRightCorner() {

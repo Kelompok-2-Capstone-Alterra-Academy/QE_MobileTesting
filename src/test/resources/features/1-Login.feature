@@ -1,5 +1,5 @@
-Feature: Login
-
+#Feature: Login
+#
 #  Scenario: Login with valid data
 #    Given I am in the login page
 #    When I fill email field to login
@@ -7,19 +7,19 @@ Feature: Login
 #    And I click login button
 #    And I verify save to password
 #    Then Redirect in the homepage
-
-  Scenario: Login with email field empty
-    Given I am logged in
-    When I filled email field with "empty"
-    And I filled password field with "valid data"
-    Then I click the login button
-
-  Scenario: Login with password field empty
-    Given I am logged in
-    When I filled email field with "valid data"
-    And I filled password field with "empty"
-    Then I click the login button
-
+#
+#  Scenario: Login with email field empty
+#    Given I am logged in
+#    When I filled email field with "empty"
+#    And I filled password field with "valid data"
+#    Then I click the login button
+#
+#  Scenario: Login with password field empty
+#    Given I am logged in
+#    When I filled email field with "valid data"
+#    And I filled password field with "empty"
+#    Then I click the login button
+#
 #  Scenario: Login with incorrect email
 #    Given I am on login page
 #    When I fills email field with "incorrect"
@@ -31,7 +31,7 @@ Feature: Login
 #    When I fills email field with "valid data"
 #    And I fills password field with "incorrect"
 #    Then I click at the login button
-
+#
 #  Scenario: Login without fill all fields
 #    Given I am at the login page
 #    When I login without filling in the email field

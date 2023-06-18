@@ -37,7 +37,7 @@ public class ProfileButton extends BasePageObject {
     }
 
     String email = "wiyanalta@gmail.com";
-    String password = "@Alta123";
+    String password = "@123Alta";
 
     @Step
     public void loginPage() {

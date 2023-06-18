@@ -70,9 +70,6 @@ public class LoginSteps {
             login.verifyEmailEmpty();
         } else if (login.isPasswordFieldEmpty()) {
             login.verifyPasswordEmpty();
-        } else {
-            // Perform other verification or actions after successful login
-            login.homepage();
         }
     }
 
@@ -105,8 +102,6 @@ public class LoginSteps {
             login.failedLogin();
         } else if (login.isPasswordIncorrect()) {
             login.failedLogin();
-        } else {
-            // Perform other verification or actions after successful login
         }
     }
 

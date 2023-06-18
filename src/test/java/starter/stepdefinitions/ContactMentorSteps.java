@@ -11,7 +11,7 @@
 //
 //    @Steps
 //    ContactMentor contactMentor;
-
+//
 //    //Scenario: User can contact mentor
 //    @Given("I already login into application")
 //    public void alreadyLoginIntoApplication() {
@@ -34,7 +34,7 @@
 //    public void clickIconWhatsappToContactMentor() {
 //        contactMentor.contactMentor();
 //    }
-
+//
 //    //Scenario: User can contact mentors through either courses
 //    @Given("I already login at the application")
 //    public void alreadyLoginAtTheApplication() {
@@ -57,7 +57,7 @@
 //    public void clickAtTheAskMentorButton() {
 //        contactMentor.askedMentorButton();
 //    }
-
+//
 //    //Scenario: User can contact mentors through video courses
 //    @Given("I already logged into app")
 //    public void alreadyLoggedIntoApp() {

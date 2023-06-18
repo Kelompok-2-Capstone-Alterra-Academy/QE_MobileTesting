@@ -1,5 +1,5 @@
 #Feature: Completing Courses
-
+#
 #  Scenario: User can submit review
 #    Given I already logged in the application
 #    When I click courses button bottom
@@ -9,13 +9,13 @@
 #    And I click the star to give rating
 #    And I fill review field
 #    Then I click submit review in the button
-
+#
 #  Scenario: User can view study history for each subject
 #    Given I already logged on the application
 #    When I click in courses button bottom
 #    And I click one of the courses
 #    Then I click certificate button
-
+#
 #  Scenario: User can download the certificate after completing the courses
 #    Given I already logged the application
 #    When I click bottom in courses button

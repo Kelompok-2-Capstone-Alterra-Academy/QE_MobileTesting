@@ -5,62 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f3f2734-ff5c-447d-b45e-453aea518574" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/CompletingCourses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/ContactMentor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/EditProfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/HistoryTransaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/LearningMaterial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/LearningVideo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/LiveSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/Mentor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/News.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/NotificationAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/Quiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/SendAssignment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/SortCourses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/TakeCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/WishlistAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/CompletingCourseSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ContactMentorSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/EditProfileSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/HistoryTransactionSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LearningMaterialSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LearningVideoSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LiveSessionSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/MentorSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/NewsSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/NotificationAccessSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/QuizSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/SendAssignmentSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/SortCoursesSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/TakeCourseSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/WishlistAccessSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/10-SendAssignment.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/11-SortCourses.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/12-CompletingCourses.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/13-ContactMentor.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/14-News.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/15-HistoryTransaction.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/16-NotificationAccess.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/17-WishlistAccess.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/18-Mentor.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/3-ProfileButton.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/4-EditProfile.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/5-TakeCourse.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/6-LiveSession.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/7-Quiz.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/8-LearningVideo.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/9-LearningMaterial.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/app-release.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/ProfileButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/ProfileButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/CompletingCourseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/CompletingCourseSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ContactMentorSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ContactMentorSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LogoutSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LogoutSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ProfileButtonSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ProfileButtonSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/1-Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/1-Login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/2-Logout.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/2-Logout.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/3-Profile Button.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/12-CompletingCourses.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/12-CompletingCourses.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/13-ContactMentor.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/13-ContactMentor.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,14 +49,14 @@
     <option name="showScratchesAndConsoles" value="false" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/wiyanherraherviana/Alterra/Capstone/LMS/src/test/resources/features&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/wiyanherraherviana/Alterra/Capstone/LMS"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources/features" />

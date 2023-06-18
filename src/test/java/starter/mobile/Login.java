@@ -30,8 +30,11 @@ public class Login extends BasePageObject {
     private By buttonLogin() {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Masuk\"]");
     }
-    private By unregisteredLogin() {
+    private By unregistered() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Login Failed\"]");
+    }
+    private By unregisteredLogin() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Invalid email or password\"]");
     }
     private By passwordVerification() {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Lain Kali\"]");
@@ -43,7 +46,7 @@ public class Login extends BasePageObject {
     String email = "wiyanalta@gmail.com";
     String emailIncorrect = "wiyan.com";
     String emailUnregister = "wiyan@alta.com";
-    String password = "@Alta123";
+    String password = "@123Alta";
     String passwordIncorrect = "Alta123";
 
     @Step
@@ -56,9 +59,10 @@ public class Login extends BasePageObject {
         waitUntilPresence(emailField()).sendKeys(email);
     }
     @Step
-    public void fillIncorrectEmailField() {
+    public By fillIncorrectEmailField() {
         onClick(emailField());
         waitUntilPresence(emailField()).sendKeys(emailIncorrect);
+        return null;
     }
     @Step
     public void fillUnregisterEmailField() {
@@ -83,9 +87,10 @@ public class Login extends BasePageObject {
         waitUntilPresence(passwordField()).sendKeys(password);
     }
     @Step
-    public void fillIncorrectPasswordField() {
+    public By fillIncorrectPasswordField() {
         onClick(passwordField());
         waitUntilPresence(passwordField()).sendKeys(passwordIncorrect);
+        return null;
     }
     @Step
     public void fieldPasswordEmpty() {
@@ -101,6 +106,10 @@ public class Login extends BasePageObject {
     }
     @Step
     public void failedLogin() {
+        onClick(unregistered());
+    }
+    @Step
+    public void invalidLogin() {
         onClick(unregisteredLogin());
     }
     @Step
@@ -110,5 +119,28 @@ public class Login extends BasePageObject {
     @Step
     public void homepage() {
         onClick(homepages());
+    }
+    @Step
+    public boolean isEmailFieldEmpty() {
+        return waitUntilVisible(emailField()).getText().isEmpty();
+    }
+    @Step
+    public boolean isPasswordFieldEmpty() {
+        return waitUntilVisible(passwordField()).getText().isEmpty();
+    }
+    @Step
+    public boolean isEmailIncorrect() {
+        // Lakukan pengecekan apakah pesan error "Email tidak valid" muncul di halaman
+        return waitUntilVisible(emailField()).getText().isEmpty();
+    }
+    @Step
+    public boolean isPasswordIncorrect() {
+        // Lakukan pengecekan apakah pesan error "Password tidak valid" muncul di halaman
+        return waitUntilVisible(passwordField()).getText().isEmpty();
+    }
+    @Step
+    public boolean isFailedLogin() {
+        // Lakukan pengecekan apakah pesan error "Login Failed" muncul di halaman
+        return waitUntilVisible(unregistered()).isDisplayed();
     }
 }

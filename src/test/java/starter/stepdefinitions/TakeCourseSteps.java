@@ -58,4 +58,92 @@
 //    public void canViewModul() {
 //        takeCourse.viewModul();
 //    }
+//
+//    //Scenario: User take course without choosing class
+//    @Given("I already logged on application")
+//    public void alreadyLoginOnApplication() {
+//        takeCourse.loginPage();
+//        takeCourse.fillEmailField();
+//        takeCourse.fillPasswordField();
+//        takeCourse.loginButton();
+//        takeCourse.verifyPassword();
+//        takeCourse.homepage();
+//    }
+//    @When("I click see all on the popular courses")
+//    public void clickSeeAllThePopulerCourses() {
+//        takeCourse.seeAll();
+//    }
+//    @And("I click choose class and major")
+//    public void clickChooseeClassAndMajor() {
+//        takeCourse.chooseClassAndMajor();
+//    }
+//    @And("I choose {string} only")
+//    public void chooseeMajor(String option) {
+//        if (option.equals("major")) {
+//            takeCourse.chooseMajor();
+//        } else if (option.equals("class")) {
+//            takeCourse.chooseClass();
+//        } else {
+//
+//        }
+//    }
+//    @Then("I click save button")
+//    public void clickSaveButtonn() {
+//        takeCourse.saveButton();
+//    }
+//
+//    //Scenario: User take course without choosing class
+//    @Given("I already logged on application")
+//    public void alreadyLoginOnApplication() {
+//        takeCourse.loginPage();
+//        takeCourse.fillEmailField();
+//        takeCourse.fillPasswordField();
+//        takeCourse.loginButton();
+//        takeCourse.verifyPassword();
+//        takeCourse.homepage();
+//    }
+//    @When("I click see all on the popular courses")
+//    public void clickSeeAllThePopulerCourses() {
+//        takeCourse.seeAll();
+//    }
+//    @And("I click choose class and major")
+//    public void clickChooseeClassAndMajor() {
+//        takeCourse.chooseClassAndMajor();
+//    }
+//    @And("I choose major")
+//    public void chooseeMajor() {
+//        takeCourse.chooseMajor();
+//    }
+//    @Then("Then I click save button")
+//    public void clickSaveButtonn() {
+//        takeCourse.saveButton();
+//    }
+//
+//    //Scenario: User take course without choosing major
+//    @Given("I already logged on application")
+//    public void alreadyLoginApplication() {
+//        takeCourse.loginPage();
+//        takeCourse.fillEmailField();
+//        takeCourse.fillPasswordField();
+//        takeCourse.loginButton();
+//        takeCourse.verifyPassword();
+//        takeCourse.homepage();
+//    }
+//    @When("I click see all on the popular courses")
+//    public void clickSeeAllePopulerCourses() {
+//        takeCourse.seeAll();
+//    }
+//    @And("I click choose class and major")
+//    public void clickChooClassAndMajor() {
+//        takeCourse.chooseClassAndMajor();
+//    }
+//    @And("I choose major")
+//    public void chooseTheMajor() {
+//        takeCourse.chooseMajor();
+//    }
+//    @Then("Then I click save button")
+//    public void clickSavetheButtonn() {
+//        takeCourse.saveButton();
+//    }
+//
 //}

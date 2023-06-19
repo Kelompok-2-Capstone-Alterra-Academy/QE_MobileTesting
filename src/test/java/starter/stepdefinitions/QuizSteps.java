@@ -38,6 +38,30 @@
 //    public void clickedQuiz() {
 //        quiz.chooseQuiz();
 //    }
+//    @And("I {string} question multiple choice in the gform")
+//    public void answersQuestionMultipleChoiceInTheGform(String answers) {
+//        if (answers.equals("answers")) {
+//            quiz.answersQuestion();
+//        } else {
+//
+//        }
+//    }
+//    @And("I {string} answers the gform")
+//    public void submitAnswersTheGform(String submit) {
+//        if (submit.equals("submit")) {
+//            quiz.submitGform();
+//        } else {
+//
+//        }
+//    }
+//    @And("I {string} score quiz")
+//    public void viewScoreQuiz(String view) {
+//        if (view.equals("view")) {
+//            quiz.viewScore();
+//        } else {
+//
+//        }
+//    }
 //    @And("I clicked finish button")
 //    public void clickedFinishButton() {
 //        quiz.finishButton();

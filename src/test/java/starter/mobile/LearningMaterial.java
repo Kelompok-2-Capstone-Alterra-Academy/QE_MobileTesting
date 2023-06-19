@@ -2,6 +2,8 @@ package starter.mobile;
 
 import automation.pageobject.BasePageObject;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.PointOption;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
 
@@ -53,7 +55,7 @@ public class LearningMaterial extends BasePageObject {
     }
 
     String email = "wiyanalta@gmail.com";
-    String password = "@Alta123";
+    String password = "@123Alta";
 
     @Step
     public void loginPage() {
@@ -91,6 +93,7 @@ public class LearningMaterial extends BasePageObject {
     }
     @Step
     public void clickMaterial() {
+        scrollDown();
         onClick(material());
     }
     @Step
@@ -100,5 +103,18 @@ public class LearningMaterial extends BasePageObject {
     @Step
     public void backToCoursesButton() {
         onClick(backCourse());
+    }
+    @Step
+    public void scrollDown() {
+        int startX = getDriver().manage().window().getSize().getWidth() / 2;
+        int startY = getDriver().manage().window().getSize().getHeight() * 3 / 4;
+        int endY = getDriver().manage().window().getSize().getHeight() / 4;
+
+        TouchAction<?> action = new TouchAction<>(getDriver());
+        action.press(PointOption.point(startX, startY))
+                .waitAction()
+                .moveTo(PointOption.point(startX, endY))
+                .release()
+                .perform();
     }
 }

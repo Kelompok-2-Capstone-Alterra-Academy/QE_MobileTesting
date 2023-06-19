@@ -46,6 +46,24 @@
 //    public void clickedSelectAccessAllow() {
 //        sendAssignment.selectAccess();
 //    }
+//    @And("I select {string} assignment")
+//    public void selectFileAssignment(String file) {
+//        if (file.equals("file")) {
+//            sendAssignment.addFile();
+//        } else if (file.equals("fileInvalidFormat")) {
+//            sendAssignment.addFileInvalidFormat();
+//        } else {
+//
+//        }
+//    }
+//    @And("I fill {string} field")
+//    public void fillNoteField(String note) {
+//        if (note.equals("note")) {
+//            sendAssignment.fillNoteField();
+//        } else {
+//
+//        }
+//    }
 //    @And("I clicked submit button")
 //    public void clickedSubmitButton() {
 //        sendAssignment.submitButton();

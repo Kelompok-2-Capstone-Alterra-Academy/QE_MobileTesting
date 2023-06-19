@@ -2,6 +2,8 @@ package starter.mobile;
 
 import automation.pageobject.BasePageObject;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.PointOption;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
 
@@ -45,6 +47,15 @@ public class Quiz extends BasePageObject {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Quiz 1 - Section 2\n" +
                 "100 Point\"]");
     }
+    private By answers() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.widget.ListView/android.view.View/android.view.View[3]/android.view.View[1]/android.widget.TextView");
+    }
+    private By submit() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.widget.Button[1]");
+    }
+    private By score() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Lihat skor\"]/android.view.View");
+    }
     private By buttonFinish() {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Selesai\"]");
     }
@@ -53,7 +64,7 @@ public class Quiz extends BasePageObject {
     }
 
     String email = "wiyanalta@gmail.com";
-    String password = "@Alta123";
+    String password = "@123Alta";
 
     @Step
     public void loginPage() {
@@ -98,11 +109,37 @@ public class Quiz extends BasePageObject {
         onClick(quiz());
     }
     @Step
+    public void answersQuestion() {
+        onClick(answers());
+    }
+    @Step
+    public void submitGform() {
+        scrollDown();
+        onClick(submit());
+    }
+    @Step
+    public void viewScore() {
+        onClick(score());
+    }
+    @Step
     public void finishButton() {
         onClick(buttonFinish());
     }
     @Step
     public void nextQuizButton() {
         onClick(buttonNextQuiz());
+    }
+    @Step
+    public void scrollDown() {
+        int startX = getDriver().manage().window().getSize().getWidth() / 2;
+        int startY = getDriver().manage().window().getSize().getHeight() * 3 / 4;
+        int endY = getDriver().manage().window().getSize().getHeight() / 4;
+
+        TouchAction<?> action = new TouchAction<>(getDriver());
+        action.press(PointOption.point(startX, startY))
+                .waitAction()
+                .moveTo(PointOption.point(startX, endY))
+                .release()
+                .perform();
     }
 }

@@ -22,8 +22,8 @@
 //        learningMaterial.verifyPassword();
 //        learningMaterial.homepage();
 //    }
-//    @When("I click courses button in the bottom")
-//    public void clickCoursesButtonInTheBottom() {
+//    @When("I click courses button in the footer")
+//    public void clickCoursesButtonInTheFooter() {
 //        learningMaterial.coursesButton();
 //    }
 //    @And("I click either courses")

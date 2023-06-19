@@ -52,8 +52,17 @@ public class SendAssignment extends BasePageObject {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Pilih File\"]");
     }
     private By access() {
-//        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[1]");
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[2]");
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[1]");
+//        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[2]");
+    }
+    private By file() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView");
+    }
+    private By fileInvalidFormat() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView");
+    }
+    private By note() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText");
     }
     private By buttonSubmit() {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Submit\"]");
@@ -63,7 +72,8 @@ public class SendAssignment extends BasePageObject {
     }
 
     String email = "wiyanalta@gmail.com";
-    String password = "@Alta123";
+    String password = "@123Alta";
+    String note = "Tugas Capstone Project Kelompok 2";
 
     @Step
     public void loginPage() {
@@ -114,6 +124,19 @@ public class SendAssignment extends BasePageObject {
     @Step
     public void selectAccess() {
         onClick(access());
+    }
+    @Step
+    public void addFile() {
+        onClick(file());
+    }
+    @Step
+    public void addFileInvalidFormat() {
+        onClick(fileInvalidFormat());
+    }
+    @Step
+    public void fillNoteField() {
+        onClick(note());
+        waitUntilPresence(note()).sendKeys(note);
     }
     @Step
     public void submitButton() {

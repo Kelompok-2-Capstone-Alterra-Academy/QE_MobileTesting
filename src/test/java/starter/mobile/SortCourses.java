@@ -43,7 +43,7 @@ public class SortCourses extends BasePageObject {
     }
 
     String email = "wiyanalta@gmail.com";
-    String password = "@Alta123";
+    String password = "@123Alta";
 
     @Step
     public void loginPage() {
@@ -80,8 +80,11 @@ public class SortCourses extends BasePageObject {
         onClick(sort());
     }
     @Step
-    public void selectSortBy() {
+    public void selectSortBy1() {
         onClick(newcourses());
+    }
+    @Step
+    public void selectSortBy2() {
         onClick(major());
     }
     @Step

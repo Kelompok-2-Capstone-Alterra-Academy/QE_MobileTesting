@@ -5,23 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f3f2734-ff5c-447d-b45e-453aea518574" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/DownloadCertificateSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ReviewSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/1-Authentication.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/11-Review.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/14-NewsPost.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/9-DownloadCertificate.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/LearningMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/LearningMaterial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/LearningVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/LearningVideo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/SendAssignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/SendAssignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app-release.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/app-release.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/CompletingCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/DownloadCertificate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/ContactMentor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/EditProfile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/HistoryTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/History.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/LearningVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/Learning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/LiveSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/LiveSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/Authentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/Logout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/Mentor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/Mentor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/NewsPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/NotificationAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/Bookmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/ProfileButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/SortCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/SortCourses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/starter/mobile/TakeCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/mobile/TakeCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LearningMaterialSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LearningMaterialSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LearningVideoSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LearningVideoSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ProfileButtonSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ProfileButtonSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/QuizSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/QuizSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/SendAssignmentSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/SendAssignmentSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/CompletingCourseSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ContactMentorSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/EditProfileSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/HistoryTransactionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/HistorySteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LearningMaterialSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LearningVideoSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LearningSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/AuthenticationSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LogoutSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/MentorSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/MentorSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/NewsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/NewsPostSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/NotificationAccessSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/BookmarkSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ProfileButtonSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ProfileSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/SortCoursesSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/SortCoursesSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/TakeCourseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/TakeCourseSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/10-SendAssignment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/10-SendAssignment.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/3-ProfileButton.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/3-ProfileButton.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/5-TakeCourse.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/5-TakeCourse.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/7-Quiz.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/7-Quiz.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/9-LearningMaterial.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/9-LearningMaterial.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/WishlistAccessSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/1-Login.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/10-SendAssignment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/7-SendAssignment.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/11-SortCourses.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/8-SortCourses.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/12-CompletingCourses.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/13-ContactMentor.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/10-Mentor.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/14-News.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/15-HistoryTransaction.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/12-History.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/16-NotificationAccess.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/13-Bookmark.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/17-WishlistAccess.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/18-Mentor.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/2-Logout.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/3-ProfileButton.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/2-Profile.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/4-EditProfile.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/5-TakeCourse.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/3-TakeCourse.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/6-LiveSession.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/4-LiveSession.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/7-Quiz.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/5-Quiz.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/8-LearningVideo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/6-Learning.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/9-LearningMaterial.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,16 +133,5 @@
       <updated>1686301793258</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/starter/stepdefinitions/SendAssignmentSteps.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

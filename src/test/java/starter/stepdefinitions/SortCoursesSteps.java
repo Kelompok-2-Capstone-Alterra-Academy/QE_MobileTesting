@@ -30,9 +30,17 @@
 //    public void clickedTheSort() {
 //        sortCourses.sortBy();
 //    }
-//    @And("I select the sort by option")
-//    public void selectTheSortByOption() {
-//        sortCourses.selectSortBy();
+//    @And("I select the sort by {string}")
+//    public void selectTheSortByOption(String option) {
+//
+//        if (option.equals("New Course")) {
+//            sortCourses.selectSortBy1();
+//        } else if (option.equals("New Course and IPA")) {
+//            sortCourses.selectSortBy1();
+//            sortCourses.selectSortBy2();
+//        }else {
+//
+//        }
 //    }
 //    @Then("I clicked save button")
 //    public void clickedSaveButton() {

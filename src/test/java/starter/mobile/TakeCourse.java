@@ -40,18 +40,97 @@ public class TakeCourse extends BasePageObject {
     private By buttonSave() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Simpan\"]");
     }
+    private By buttonPromoClaim() {
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Klaim Promo\"]");
+    }
+    private By promo1() {
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Hari kemerdekaan\n" +
+                "Masa Berlaku:  \n" +
+                "2023-08-31\n" +
+                "ini adalah description\n" +
+                "Klaim Promo\"]");
+    }
+    private By promo2() {
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Promo Hemat\n" +
+                "Masa Berlaku:  \n" +
+                "2023-08-31\n" +
+                "Klaim Promo\"]");
+    }
+    private By promo3() {
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Promo Belajar\n" +
+                "Masa Berlaku:  \n" +
+                "2023-09-30\n" +
+                "Klaim Promo\"]");
+    }
+    private By promo4() {
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Promo Ekonomis\n" +
+                "Masa Berlaku:  \n" +
+                "2023-10-31\n" +
+                "Klaim Promo\"]");
+    }
+    private By arrow() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
+    }
     private By courses() {
-        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Matematika\n" +
-                "Rp. 750.000\n" +
-                "4.8\n" +
+//        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Matematika\n" +
+//                "Rp. 750.000\n" +
+//                "4.8\n" +
+//                "|\n" +
+//                "8950 Siswa\"]");
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Jangan Dihapus.\n" +
+                "Rp. 780000\n" +
+                "0.0\n" +
                 "|\n" +
-                "8950 Siswa\"]");
+                "2 Siswa\"]");
     }
     private By buttonTakeCourses() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Ambil Kursus\"]");
     }
+    private By buttonVoucher() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Gunakan Vouchermu Sekarang!\"]");
+    }
+    private By usePromo1() {
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Hari kemerdekaan\n" +
+                "Masa Berlaku:  \n" +
+                "2023-08-31\n" +
+                "ini adalah description\n" +
+                "Gunakan Promo Ini\"]");
+    }
+    private By usePromo2() {
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Promo Hemat\n" +
+                "Masa Berlaku:  \n" +
+                "2023-08-31\n" +
+                "Gunakan Promo Ini\"]");
+    }
+    private By usePromo3() {
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Promo Belajar\n" +
+                "Masa Berlaku:  \n" +
+                "2023-09-30\n" +
+                "Gunakan Promo Ini\"]");
+    }
+    private By usePromo4() {
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Promo Ekonomis\n" +
+                "Masa Berlaku:  \n" +
+                "2023-10-31\n" +
+                "Gunakan Promo Ini\"]");
+    }
     private By buttonCheckout() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Checkout\"]");
+    }
+    private By pay() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"GoPay GoPay\"]");
+    }
+    private By buttonPayNow() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.widget.Button");
+    }
+    private By pin() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[5]/android.view.View[6]/android.widget.EditText");
+    }
+    private By buttonSubmit() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[5]/android.view.View[8]/android.widget.Button");
+    }
+    private By success() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
     }
     private By modul() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Lihat Modul\"]");
@@ -60,8 +139,9 @@ public class TakeCourse extends BasePageObject {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Riwayat Transaksi\"]");
     }
 
-    String email = "wiyanalta@gmail.com";
-    String password = "@123Alta";
+    String email = "jono@gmail.com";
+    String password = "newpassword";
+    String pin = "654321";
 
     @Step
     public void loginPage() {
@@ -110,6 +190,21 @@ public class TakeCourse extends BasePageObject {
         onClick(buttonSave());
     }
     @Step
+    public void claimPromoButton() {
+        onClick(buttonPromoClaim());
+    }
+    @Step
+    public void claimPromo() {
+        onClick(promo1());
+        onClick(promo2());
+        onClick(promo3());
+        onClick(promo4());
+    }
+    @Step
+    public void arrowBack() {
+        onClick(arrow());
+    }
+    @Step
     public void eitherOfCourses() {
         onClick(courses());
     }
@@ -118,8 +213,49 @@ public class TakeCourse extends BasePageObject {
         onClick(buttonTakeCourses());
     }
     @Step
+    public void voucherButton() {
+        onClick(buttonVoucher());
+    }
+    @Step
+    public void addUsePromo1() {
+        onClick(usePromo1());
+    }
+    @Step
+    public void addUsePromo2() {
+        onClick(usePromo2());
+    }
+    @Step
+    public void addUsePromo3() {
+        onClick(usePromo3());
+    }
+    @Step
+    public void addUsePromo4() {
+        onClick(usePromo4());
+    }
+    @Step
     public void checkoutButton() {
         onClick(buttonCheckout());
+    }
+    @Step
+    public void payment() {
+        onClick(pay());
+    }
+    @Step
+    public void payNowButton() {
+        onClick(buttonPayNow());
+    }
+    @Step
+    public void fillPin() {
+        onClick(pin());
+        waitUntilPresence(pin()).sendKeys(pin);
+    }
+    @Step
+    public void submitButton() {
+        onClick(buttonSubmit());
+    }
+    @Step
+    public void paymentSuccess() {
+        onClick(success());
     }
     @Step
     public void viewModul() {

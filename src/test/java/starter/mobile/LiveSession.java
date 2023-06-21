@@ -30,18 +30,28 @@ public class LiveSession extends BasePageObject {
                 "Tab 2 of 5\"]");
     }
     private By eiterCourses() {
-        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Matematika Dasar\n" +
+//        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Matematika Dasar\n" +
+//                "Section \n" +
+//                "9\n" +
+//                "/\n" +
+//                "11\n" +
+//                "80\n" +
+//                " %\"]");
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Tes\n" +
                 "Section \n" +
                 "9\n" +
                 "/\n" +
                 "11\n" +
-                "80\n" +
+                "0\n" +
                 " %\"]");
     }
     private By buttonLiveSession() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Live Session\"]");
     }
     private By scheduleLiveSession() {
+//        return MobileBy.xpath("//android.view.View[@content-desc=\"Rabu, 19 April 2023, 13:00 - 16:00\n" +
+//                "Fisika - Materi 1\n" +
+//                "Belum Ikut\"]");
         return MobileBy.xpath("//android.view.View[@content-desc=\"Rabu, 19 April 2023, 13:00 - 16:00\n" +
                 "Fisika - Materi 1\n" +
                 "Belum Ikut\"]");
@@ -50,8 +60,8 @@ public class LiveSession extends BasePageObject {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Join Meeting\"]");
     }
 
-    String email = "wiyanalta@gmail.com";
-    String password = "@Alta123";
+    String email = "jono@gmail.com";
+    String password = "newpassword";
 
     @Step
     public void loginPage() {

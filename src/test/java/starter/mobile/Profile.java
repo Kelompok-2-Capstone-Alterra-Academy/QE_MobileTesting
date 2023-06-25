@@ -7,6 +7,9 @@ import org.openqa.selenium.By;
 
 public class Profile extends BasePageObject {
 
+    private By buttonMasuk() {
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Masuk\"]");
+    }
     private By loginPages() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Masuk ke Akun\"]");
     }
@@ -65,23 +68,33 @@ public class Profile extends BasePageObject {
     private By buttonSaveChange() {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Simpan Perubahan\"]");
     }
+    private By profile() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View");
+    }
+    private By photo() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView");
+    }
 
     String email = "wiyanalta@gmail.com";
-    String password = "@123Alta";
+    String password = "@Alta123";
     String fullname = "Wiyan H.H.";
-    String fullnameWithCharacters = "Wiyan \uD83C\uDF1F Herra";
+    String fullnameEmpty = "";
     String hometown = "Semarang";
-    String hometownWithCharacters = "$em@rang";
+    String hometownLengthLessThan5 = "SMG";
     String telephoneNumber = "081462484322";
-    String telephoneNumberWithParentheses = "(082)234842641";
+    String telephonenNumberLengthLessThan10 = "082234842";
+    String telephoneNumberEmpty = "";
     String levelClass = "11";
     String levelClassWithText = "sebelas";
     String schoolName = "SMAN 1 Semarang";
-    String schoolNameWithCharacters = "$M@N 1 $3m@r@n9";
     String major = "IPA";
     String gander = "Male";
     String birthOfDate = "10-02-2002";
 
+    @Step
+    public void masukButton() {
+        onClick(buttonMasuk());
+    }
     @Step
     public void loginPage() {
         waitUntilPresence(loginPages());
@@ -131,20 +144,22 @@ public class Profile extends BasePageObject {
         waitUntilPresence(fullNameField()).sendKeys(fullname);
     }
     @Step
-    public void changeFullNameWithCharacters() {
+    public void changeFullNameWithEmpty() {
         onClick(fullNameField());
         waitUntilPresence(fullNameField()).clear();
-        waitUntilPresence(fullNameField()).sendKeys(fullnameWithCharacters);
+        waitUntilPresence(fullNameField()).sendKeys(fullnameEmpty);
     }
     @Step
     public void fillHometownField() {
         onClick(cityOfOriginField());
+        waitUntilPresence(cityOfOriginField()).clear();
         waitUntilPresence(cityOfOriginField()).sendKeys(hometown);
     }
     @Step
-    public void fillHometownWithCharacters() {
+    public void fillHometownWithLengthLessThat5() {
         onClick(cityOfOriginField());
-        waitUntilPresence(cityOfOriginField()).sendKeys(hometownWithCharacters);
+        waitUntilPresence(cityOfOriginField()).clear();
+        waitUntilPresence(cityOfOriginField()).sendKeys(hometownLengthLessThan5);
     }
     @Step
     public void changeTelephoneNumberField() {
@@ -153,56 +168,63 @@ public class Profile extends BasePageObject {
         waitUntilPresence(numberPhoneField()).sendKeys(telephoneNumber);
     }
     @Step
-    public void changeTelephoneNumberWithParentheses() {
+    public void changeTelephoneNumberWithLengthLessThat10() {
         onClick(numberPhoneField());
         waitUntilPresence(numberPhoneField()).clear();
-        waitUntilPresence(numberPhoneField()).sendKeys(telephoneNumberWithParentheses);
+        waitUntilPresence(numberPhoneField()).sendKeys(telephonenNumberLengthLessThan10);
+    }
+    @Step
+    public void changeTelephoneNumberWithEmpty() {
+        onClick(numberPhoneField());
+        waitUntilPresence(numberPhoneField()).clear();
+        waitUntilPresence(numberPhoneField()).sendKeys(telephoneNumberEmpty);
     }
     @Step
     public void fillSchoolNameField() {
         onClick(nameSchoolField());
+        waitUntilPresence(nameSchoolField()).clear();
         waitUntilPresence(nameSchoolField()).sendKeys(schoolName);
-    }
-    @Step
-    public void fillSchoolNameWithCharacters() {
-        onClick(nameSchoolField());
-        waitUntilPresence(nameSchoolField()).sendKeys(schoolNameWithCharacters);
     }
     @Step
     public void fillClassLevelField() {
         onClick(levelClassField());
+        waitUntilPresence(levelClassField()).clear();
         waitUntilPresence(levelClassField()).sendKeys(levelClass);
     }
     @Step
     public void fillClassLevelWithText() {
         onClick(levelClassField());
+        waitUntilPresence(levelClassField()).clear();
         waitUntilPresence(levelClassField()).sendKeys(levelClassWithText);
     }
     @Step
     public void fillMajorField() {
         onClick(majorField());
+        waitUntilPresence(majorField()).clear();
         waitUntilPresence(majorField()).sendKeys(major);
+    }
+    @Step
+    public void selectGander() {
+        onClick(gander());
+        waitUntilPresence(gander()).clear();
+        waitUntilPresence(gander()).sendKeys(gander);
+    }
+    @Step
+    public void fillBirthOfDate() {
+        onClick(birthOfDate());
+        waitUntilPresence(birthOfDate()).clear();
+        waitUntilPresence(birthOfDate()).sendKeys(birthOfDate);
     }
     @Step
     public void saveChangeButton() {
         onClick(buttonSaveChange());
     }
     @Step
-    public void selectGander() {
-        onClick(gander());
-        waitUntilPresence(gander()).sendKeys(gander);
+    public void changeProfile() {
+        onClick(profile());
     }
     @Step
-    public void fillBirthOfDate() {
-        onClick(birthOfDate());
-        waitUntilPresence(birthOfDate()).sendKeys(birthOfDate);
-
-    }
-    @Step
-    public void clearAllFields(){
-        onClick(fullNameField());
-        waitUntilPresence(fullNameField()).clear();
-        onClick(numberPhoneField());
-        waitUntilPresence(numberPhoneField()).clear();
+    public void selectPhoto() {
+        onClick(photo());
     }
 }

@@ -9,6 +9,9 @@ import automation.pageobject.BasePageObject;
 
 public class Authentication extends BasePageObject {
 
+    private By buttonMasuk() {
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Masuk\"]");
+    }
     private By loginPages() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Masuk ke Akun\"]");
     }
@@ -54,9 +57,13 @@ public class Authentication extends BasePageObject {
     String email = "wiyanalta@gmail.com";
     String emailIncorrect = "wiyan.com";
     String emailUnregister = "wiyan@alta.com";
-    String password = "@123Alta";
+    String password = "@Alta123";
     String passwordIncorrect = "Alta123";
 
+    @Step
+    public void masukButton() {
+        onClick(buttonMasuk());
+    }
     @Step
     public void loginPage() {
         waitUntilPresence(loginPages());

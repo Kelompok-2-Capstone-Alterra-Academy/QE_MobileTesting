@@ -9,6 +9,9 @@ import org.openqa.selenium.By;
 
 public class Quiz extends BasePageObject {
 
+    private By buttonMasuk() {
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Masuk\"]");
+    }
     private By loginPages() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Masuk ke Akun\"]");
     }
@@ -32,23 +35,26 @@ public class Quiz extends BasePageObject {
                 "Tab 2 of 5\"]");
     }
     private By eiterCourses() {
-        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Matematika Dasar\n" +
-                "Section \n" +
-                "9\n" +
-                "/\n" +
-                "11\n" +
-                "80\n" +
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Golang\n" +
+                "Kursus Baru !\n" +
+                "0\n" +
                 " %\"]");
     }
     private By buttonQuiz() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Quiz\"]");
     }
     private By quiz() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Quiz 1 - Section 2\n" +
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Quiz 4 - Dasar-Dasar Golang\n" +
                 "100 Point\"]");
     }
-    private By answers() {
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.widget.ListView/android.view.View/android.view.View[3]/android.view.View[1]/android.widget.TextView");
+    private By answers1() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.widget.ListView/android.view.View[1]/android.view.View[2]/android.view.View[4]/android.view.View/android.widget.RadioButton");
+    }
+    private By answers2() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.widget.ListView/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.RadioButton");
+    }
+    private By answers3() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.widget.ListView/android.view.View[2]/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.RadioButton");
     }
     private By submit() {
         return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.widget.Button[1]");
@@ -64,8 +70,12 @@ public class Quiz extends BasePageObject {
     }
 
     String email = "wiyanalta@gmail.com";
-    String password = "@123Alta";
+    String password = "@Alta123";
 
+    @Step
+    public void masukButton() {
+        onClick(buttonMasuk());
+    }
     @Step
     public void loginPage() {
         waitUntilPresence(loginPages());
@@ -109,8 +119,19 @@ public class Quiz extends BasePageObject {
         onClick(quiz());
     }
     @Step
-    public void answersQuestion() {
-        onClick(answers());
+    public void answersQuestion1() {
+        onClick(answers1());
+    }
+    @Step
+    public void answersQuestion2() {
+        scrollDown();
+        onClick(answers2());
+    }
+    @Step
+    public void answersQuestion3() {
+        scrollDown();
+        scrollDown();
+        onClick(answers3());
     }
     @Step
     public void submitGform() {

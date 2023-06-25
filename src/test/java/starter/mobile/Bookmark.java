@@ -7,6 +7,9 @@ import org.openqa.selenium.By;
 
 public class Bookmark extends BasePageObject {
 
+    private By buttonMasuk() {
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Masuk\"]");
+    }
     private By loginPages() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Masuk ke Akun\"]");
     }
@@ -28,8 +31,14 @@ public class Bookmark extends BasePageObject {
     private By notificationIcon() {
         return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[5]");
     }
+    private By notification() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Notifikasi\"]");
+    }
     private By wishlistIcon() {
         return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[6]");
+    }
+    private By wishlist() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Wishlist\"]");
     }
     private By back() {
         return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.Button");
@@ -38,9 +47,13 @@ public class Bookmark extends BasePageObject {
         return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
     }
 
-    String email = "jono@gmail.com";
-    String password = "newpassword";
+    String email = "wiyanalta@gmail.com";
+    String password = "@123Alta";
 
+    @Step
+    public void masukButton() {
+        onClick(buttonMasuk());
+    }
     @Step
     public void loginPage() {
         waitUntilPresence(loginPages());
@@ -72,8 +85,16 @@ public class Bookmark extends BasePageObject {
         onClick(notificationIcon());
     }
     @Step
+    public void notificationPage() {
+        onClick(notification());
+    }
+    @Step
     public void iconWishlist() {
         onClick(wishlistIcon());
+    }
+    @Step
+    public void wishlistPage() {
+        onClick(wishlist());
     }
     @Step
     public void returnHomepage() {

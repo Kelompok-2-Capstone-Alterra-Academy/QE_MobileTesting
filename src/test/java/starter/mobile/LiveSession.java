@@ -7,6 +7,9 @@ import org.openqa.selenium.By;
 
 public class LiveSession extends BasePageObject {
 
+    private By buttonMasuk() {
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Masuk\"]");
+    }
     private By loginPages() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Masuk ke Akun\"]");
     }
@@ -30,39 +33,45 @@ public class LiveSession extends BasePageObject {
                 "Tab 2 of 5\"]");
     }
     private By eiterCourses() {
-//        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Matematika Dasar\n" +
-//                "Section \n" +
-//                "9\n" +
-//                "/\n" +
-//                "11\n" +
-//                "80\n" +
-//                " %\"]");
-        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Tes\n" +
-                "Section \n" +
-                "9\n" +
-                "/\n" +
-                "11\n" +
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Golang\n" +
+                "Kursus Baru !\n" +
                 "0\n" +
                 " %\"]");
     }
     private By buttonLiveSession() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Live Session\"]");
     }
+    private By buttonJoinedNotYet() {
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Belum Ikut\"]");
+    }
+    private By buttonJoinedAlready() {
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Sudah Ikut\"]");
+    }
     private By scheduleLiveSession() {
-//        return MobileBy.xpath("//android.view.View[@content-desc=\"Rabu, 19 April 2023, 13:00 - 16:00\n" +
-//                "Fisika - Materi 1\n" +
-//                "Belum Ikut\"]");
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Rabu, 19 April 2023, 13:00 - 16:00\n" +
-                "Fisika - Materi 1\n" +
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Rabu, 17 April 2023, 13:00 - 16:00\n" +
+                "Live Sesion - Pertemuan 5\n" +
                 "Belum Ikut\"]");
+    }
+    private By scheduleLiveSession2() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Senin, 17 April 2023, 13:00 - 16:00\n" +
+                "Live Sesion - Pertemuan 1\n" +
+                "Sudah Ikut\"]");
     }
     private By buttonJoinMeeting() {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Join Meeting\"]");
     }
+    private By pageLiveSession() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Live Sesion - Pertemuan 1\"]");
+    }
 
-    String email = "jono@gmail.com";
-    String password = "newpassword";
 
+    String email = "wiyanalta@gmail.com";
+    String password = "@Alta123";
+
+    @Step
+    public void masukButton() {
+        onClick(buttonMasuk());
+    }
     @Step
     public void loginPage() {
         waitUntilPresence(loginPages());
@@ -102,11 +111,27 @@ public class LiveSession extends BasePageObject {
         onClick(buttonLiveSession());
     }
     @Step
+    public void joinedNotYetButton() {
+        onClick(buttonJoinedNotYet());
+    }
+    @Step
+    public void joinedAlreadyButton() {
+        onClick(buttonJoinedAlready());
+    }
+    @Step
     public void classMeetingSchedule() {
         onClick(scheduleLiveSession());
     }
     @Step
+    public void classMeetingSchedule2() {
+        onClick(scheduleLiveSession2());
+    }
+    @Step
     public void joinMettingButton() {
         onClick(buttonJoinMeeting());
+    }
+    @Step
+    public void liveSessionPage() {
+        onClick(pageLiveSession());
     }
 }

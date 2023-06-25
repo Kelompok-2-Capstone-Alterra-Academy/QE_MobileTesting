@@ -7,6 +7,9 @@ import org.openqa.selenium.By;
 
 public class History extends BasePageObject {
 
+    private By buttonMasuk() {
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Masuk\"]");
+    }
     private By loginPages() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Masuk ke Akun\"]");
     }
@@ -29,36 +32,34 @@ public class History extends BasePageObject {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Transaksi\n" +
                 "Tab 4 of 5\"]");
     }
-    private By ereceipt() {
-        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Matematika\n" +
-                "Tanggal Order : 15 JAnuari 2023\n" +
-                "E-Recipt\"]");
+    private By buttonAccount() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Akun\n" +
+                "Tab 5 of 5\"]");
     }
-    private By buttonCompleted() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Selesai\n" +
-                "Tab 2 of 2\"]");
+    private By buttonProfile() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[3]");
+    }
+    private By buttonMyTransaction() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Transaksi Saya\"]");
+    }
+    private By ereceipt() {
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Golang\n" +
+                "22 June 2023\n" +
+                "success\n" +
+                "E-Recipt\"]");
     }
     private By buttonCourses() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Kursus\n" +
                 "Tab 2 of 5\"]");
     }
-    private By eiterCourses() {
-        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Matematika Dasar\n" +
-                "Section \n" +
-                "9\n" +
-                "/\n" +
-                "11\n" +
-                "80\n" +
-                " %\"]");
-    }
-    private By buttonCertificate() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Sertifikat\n" +
-                "Tab 2 of 2\"]");
-    }
 
     String email = "wiyanalta@gmail.com";
     String password = "@123Alta";
 
+    @Step
+    public void masukButton() {
+        onClick(buttonMasuk());
+    }
     @Step
     public void loginPage() {
         waitUntilPresence(loginPages());
@@ -90,23 +91,23 @@ public class History extends BasePageObject {
         onClick(buttonTransaction());
     }
     @Step
+    public void accountButton() {
+        onClick(buttonAccount());
+    }
+    @Step
+    public void profileButton() {
+        onClick(buttonProfile());
+    }
+    @Step
+    public void myTransactionButton() {
+        onClick(buttonMyTransaction());
+    }
+    @Step
     public void receiptCourses() {
         onClick(ereceipt());
     }
     @Step
     public void coursesButton() {
         onClick(buttonCourses());
-    }
-    @Step
-    public void completedButton() {
-        onClick(buttonCompleted());
-    }
-    @Step
-    public void clickCourse() {
-        onClick(eiterCourses());
-    }
-    @Step
-    public void certificateButton() {
-        onClick(buttonCertificate());
     }
 }

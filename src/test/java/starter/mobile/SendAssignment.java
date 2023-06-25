@@ -7,6 +7,9 @@ import org.openqa.selenium.By;
 
 public class SendAssignment extends BasePageObject {
 
+    private By buttonMasuk() {
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Masuk\"]");
+    }
     private By loginPages() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Masuk ke Akun\"]");
     }
@@ -30,20 +33,17 @@ public class SendAssignment extends BasePageObject {
                 "Tab 2 of 5\"]");
     }
     private By eiterCourses() {
-        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Matematika Dasar\n" +
-                "Section \n" +
-                "9\n" +
-                "/\n" +
-                "11\n" +
-                "80\n" +
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Golang\n" +
+                "Kursus Baru !\n" +
+                "0\n" +
                 " %\"]");
     }
     private By assignment() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"02\n" +
-                "Materi Matematika Dasar\n" +
+                "Materi Materi 1\n" +
                 "Tugas\n" +
                 "Essay\n" +
-                "Selesai\"]");
+                "Belum Selesai\"]");
     }
     private By buttonSubmitAssignment() {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Kumpulkan Tugas\"]");
@@ -53,12 +53,8 @@ public class SendAssignment extends BasePageObject {
     }
     private By access() {
         return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[1]");
-//        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[2]");
     }
     private By file() {
-        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView");
-    }
-    private By fileInvalidFormat() {
         return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView");
     }
     private By note() {
@@ -67,14 +63,18 @@ public class SendAssignment extends BasePageObject {
     private By buttonSubmit() {
         return MobileBy.xpath("//android.widget.Button[@content-desc=\"Submit\"]");
     }
-    private By buttonBackToHome() {
-        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Kembali ke Home\"]");
+    private By buttonBackMyCourse() {
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Kursus Saya\"]");
     }
 
     String email = "wiyanalta@gmail.com";
-    String password = "@123Alta";
+    String password = "@Alta123";
     String note = "Tugas Capstone Project Kelompok 2";
 
+    @Step
+    public void masukButton() {
+        onClick(buttonMasuk());
+    }
     @Step
     public void loginPage() {
         waitUntilPresence(loginPages());
@@ -130,10 +130,6 @@ public class SendAssignment extends BasePageObject {
         onClick(file());
     }
     @Step
-    public void addFileInvalidFormat() {
-        onClick(fileInvalidFormat());
-    }
-    @Step
     public void fillNoteField() {
         onClick(note());
         waitUntilPresence(note()).sendKeys(note);
@@ -143,7 +139,7 @@ public class SendAssignment extends BasePageObject {
         onClick(buttonSubmit());
     }
     @Step
-    public void backToHomeButton() {
-        onClick(buttonBackToHome());
+    public void backToMyCourseButton() {
+        onClick(buttonBackMyCourse());
     }
 }

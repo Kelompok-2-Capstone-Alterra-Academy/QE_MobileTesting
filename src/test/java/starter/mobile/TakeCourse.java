@@ -2,11 +2,16 @@ package starter.mobile;
 
 import automation.pageobject.BasePageObject;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.PointOption;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
 
 public class TakeCourse extends BasePageObject {
 
+    private By buttonMasuk() {
+        return MobileBy.xpath("//android.widget.Button[@content-desc=\"Masuk\"]");
+    }
     private By loginPages() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Masuk ke Akun\"]");
     }
@@ -27,15 +32,16 @@ public class TakeCourse extends BasePageObject {
     }
     private By viewAll() {
         return MobileBy.xpath("(//android.widget.Button[@content-desc=\"Lihat Semua\"])[1]");
+//        return MobileBy.xpath("(//android.widget.Button[@content-desc=\"Lihat Semua\"])[3]");
     }
     private By classAndMajor() {
         return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Pilih Kelas\"]");
     }
     private By selectClass() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Kelas 12\"]");
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Kelas 10\"]");
     }
     private By selectMajor() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"IPA\"]");
+        return MobileBy.xpath("//android.view.View[@content-desc=\"RPL\"]");
     }
     private By buttonSave() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Simpan\"]");
@@ -47,41 +53,53 @@ public class TakeCourse extends BasePageObject {
         return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Hari kemerdekaan\n" +
                 "Masa Berlaku:  \n" +
                 "2023-08-31\n" +
-                "ini adalah description\n" +
+                "Dapatkan Potongan Hingga 90%\n" +
                 "Klaim Promo\"]");
     }
     private By promo2() {
         return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Promo Hemat\n" +
                 "Masa Berlaku:  \n" +
                 "2023-08-31\n" +
+                "Dapatkan Potongan Hingga 50%\n" +
                 "Klaim Promo\"]");
     }
     private By promo3() {
         return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Promo Belajar\n" +
                 "Masa Berlaku:  \n" +
                 "2023-09-30\n" +
+                "Dapatkan Potongan Hingga 25%\n" +
                 "Klaim Promo\"]");
     }
     private By promo4() {
         return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Promo Ekonomis\n" +
                 "Masa Berlaku:  \n" +
                 "2023-10-31\n" +
+                "Dapatkan Potongan Hingga 80%\n" +
                 "Klaim Promo\"]");
     }
-    private By arrow() {
+    private By back1() {
         return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
     }
     private By courses() {
-//        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Matematika\n" +
-//                "Rp. 750.000\n" +
-//                "4.8\n" +
-//                "|\n" +
-//                "8950 Siswa\"]");
-        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Jangan Dihapus.\n" +
-                "Rp. 780000\n" +
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Golang\n" +
+                "Rp. 100.000\n" +
                 "0.0\n" +
                 "|\n" +
-                "2 Siswa\"]");
+                "10 Siswa\"]");
+    }
+    private By seeAllPurchasedCourses() {
+//        return MobileBy.xpath("(//android.widget.Button[@content-desc=\"Lihat Semua\"])[4]");
+        return MobileBy.xpath("(//android.widget.Button[@content-desc=\"Lihat Semua\"])[5]");
+    }
+    private By purchasedCourse() {
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Golang\n" +
+                "Rp. 100.000\n" +
+                "0.0\n" +
+                "|\n" +
+                "11 Siswa\"]");
+    }
+    private By notificationPurchase() {
+        return MobileBy.xpath("//android.view.View[@content-desc=\"Kamu Sudah Membeli Course Ini\"]");
     }
     private By buttonTakeCourses() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Ambil Kursus\"]");
@@ -93,29 +111,35 @@ public class TakeCourse extends BasePageObject {
         return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Hari kemerdekaan\n" +
                 "Masa Berlaku:  \n" +
                 "2023-08-31\n" +
-                "ini adalah description\n" +
+                "Dapatkan Potongan Hingga 90%\n" +
                 "Gunakan Promo Ini\"]");
     }
     private By usePromo2() {
         return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Promo Hemat\n" +
                 "Masa Berlaku:  \n" +
                 "2023-08-31\n" +
+                "Dapatkan Potongan Hingga 50%\n" +
                 "Gunakan Promo Ini\"]");
     }
     private By usePromo3() {
         return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Promo Belajar\n" +
                 "Masa Berlaku:  \n" +
                 "2023-09-30\n" +
+                "Dapatkan Potongan Hingga 25%\n" +
                 "Gunakan Promo Ini\"]");
     }
     private By usePromo4() {
         return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Promo Ekonomis\n" +
                 "Masa Berlaku:  \n" +
                 "2023-10-31\n" +
+                "Dapatkan Potongan Hingga 80%\n" +
                 "Gunakan Promo Ini\"]");
     }
     private By buttonCheckout() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Checkout\"]");
+    }
+    private By back2() {
+        return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
     }
     private By pay() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"GoPay GoPay\"]");
@@ -129,20 +153,33 @@ public class TakeCourse extends BasePageObject {
     private By buttonSubmit() {
         return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[5]/android.view.View[8]/android.widget.Button");
     }
-    private By success() {
+    private By paymentBack() {
         return MobileBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
     }
-    private By modul() {
-        return MobileBy.xpath("//android.view.View[@content-desc=\"Lihat Modul\"]");
-    }
-    private By historyTransaction() {
+    private By transactionHistory() {
         return MobileBy.xpath("//android.view.View[@content-desc=\"Riwayat Transaksi\"]");
     }
+    private By ereceipt() {
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Golang\n" +
+                "25 June 2023\n" +
+                "success\n" +
+                "E-Recipt\"]");
+    }
+    private By ereceipt2() {
+        return MobileBy.xpath("//android.widget.ImageView[@content-desc=\"Golang\n" +
+                "25 June 2023\n" +
+                "pending\n" +
+                "E-Recipt\"]");
+    }
 
-    String email = "jono@gmail.com";
-    String password = "newpassword";
+    String email = "wiyanalta@gmail.com";
+    String password = "@Alta123";
     String pin = "654321";
 
+    @Step
+    public void masukButton() {
+        onClick(buttonMasuk());
+    }
     @Step
     public void loginPage() {
         waitUntilPresence(loginPages());
@@ -201,12 +238,20 @@ public class TakeCourse extends BasePageObject {
         onClick(promo4());
     }
     @Step
-    public void arrowBack() {
-        onClick(arrow());
+    public void back() {
+        onClick(back1());
+    }
+    @Step
+    public void backWithoutPayment() {
+        onClick(back2());
     }
     @Step
     public void eitherOfCourses() {
         onClick(courses());
+    }
+    @Step
+    public void coursesPurchased() {
+        onClick(purchasedCourse());
     }
     @Step
     public void takeCoursesButton() {
@@ -254,17 +299,36 @@ public class TakeCourse extends BasePageObject {
         onClick(buttonSubmit());
     }
     @Step
-    public void paymentSuccess() {
-        onClick(success());
+    public void backPayment() {
+        onClick(paymentBack());
     }
     @Step
-    public void viewModul() {
-        onClick(modul());
+    public void historyTransaction() {
+        onClick(transactionHistory());
     }
     @Step
-    public void viewHistoryTransaction() {
-        onClick(historyTransaction());
+    public void viewEReceiptSuccess() {
+        onClick(ereceipt());
     }
+    @Step
+    public void viewEReceiptPending() {
+        onClick(ereceipt2());
+    }
+    @Step
+    public void seeAllPurchase() {
+        onClick(seeAllPurchasedCourses());
+    }
+    @Step
+    public void scrollDown() {
+        int startX = getDriver().manage().window().getSize().getWidth() / 2;
+        int startY = getDriver().manage().window().getSize().getHeight() * 3 / 4;
+        int endY = getDriver().manage().window().getSize().getHeight() / 4;
 
-
+        TouchAction<?> action = new TouchAction<>(getDriver());
+        action.press(PointOption.point(startX, startY))
+                .waitAction()
+                .moveTo(PointOption.point(startX, endY))
+                .release()
+                .perform();
+    }
 }

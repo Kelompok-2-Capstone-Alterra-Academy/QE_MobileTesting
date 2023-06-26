@@ -247,6 +247,44 @@
 #          echo "PATH: $PATH"
 #          mvn clean verify -Pserenity
 
+#on:
+#  push:
+#    branches:
+#      - master
+#
+#name: Genymotion Cloud SaaS
+#
+#jobs:
+#  test:
+#    name: Start Genymotion Cloud SaaS instance
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v3
+#
+#      - uses: actions/setup-python@v4
+#        with:
+#          python-version: "3.10.11"
+#
+#      - name: Set up JDK 17
+#        uses: actions/setup-java@v3
+#        with:
+#          java-version: "17"
+#          distribution: "temurin"
+#
+#      - name: Setup Android SDK
+#        uses: android-actions/setup-android@v2
+#
+#      - name: Start Genymotion Cloud SaaS instance
+#        uses:  genymobile/genymotion-saas-github-action@v0.4
+#        with:
+##          email: ${{ secrets.GMSAAS_EMAIL }}
+#          email: "wiyanalta@gmail.com"
+##          password: ${{ secrets.GMSAAS_PASSWORD }}
+#          password: "@Alta123"
+#          recipe_uuid: ea5fda48-fa8b-48c1-8acc-07d910856141 # Google Pixel XL 8.1
+
+
 on:
   push:
     branches:
@@ -276,10 +314,14 @@ jobs:
         uses: android-actions/setup-android@v2
 
       - name: Start Genymotion Cloud SaaS instance
-        uses:  genymobile/genymotion-saas-github-action@v0.4
+        uses: genymobile/genymotion-saas-github-action@v0.4
         with:
-#          email: ${{ secrets.GMSAAS_EMAIL }}
           email: "wiyanalta@gmail.com"
-#          password: ${{ secrets.GMSAAS_PASSWORD }}
           password: "@Alta123"
           recipe_uuid: ea5fda48-fa8b-48c1-8acc-07d910856141 # Google Pixel XL 8.1
+
+      - name: Run Serenity Maven tests
+        run: mvn clean verify -Pserenity
+
+      # Any additional steps or post-test actions can be included here
+

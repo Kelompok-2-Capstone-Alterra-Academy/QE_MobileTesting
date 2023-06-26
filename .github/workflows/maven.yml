@@ -353,7 +353,7 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
         with:
-          sdk-platform: "android-11"
+          sdk-platform: "android-10"
           sdk-components: "platform-tools"
 
       - name: Start Genymotion Cloud SaaS instance

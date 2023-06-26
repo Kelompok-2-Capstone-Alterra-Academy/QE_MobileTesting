@@ -26,8 +26,10 @@ public class AndroidDriverPool {
 //        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
 
 //        for CICD dont delete
+        caps.setCapability(MobileCapabilityType.UDID, "ea5fda48-fa8b-48c1-8acc-07d910856141");
         caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1");
         caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Google Pixel XL");
+
 
 //
 

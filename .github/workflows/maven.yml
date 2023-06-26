@@ -402,9 +402,14 @@ jobs:
           chmod +x genymotion-3.2.1-linux_x64.bin
           echo "y" | sudo ./genymotion-3.2.1-linux_x64.bin -d /opt/genymotion
 
+      - name: Install Qt dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxcb-xinerama0
 
       - name: Start Genymotion virtual device
         run: |
+          export QT_DEBUG_PLUGINS=1
           /opt/genymotion/genymotion/./genymotion --headless --no-popup --memory 1024 --device "Samsung Galaxy S4" # Adjust the virtual device settings as per your requirements
 
       - name: Run integration tests

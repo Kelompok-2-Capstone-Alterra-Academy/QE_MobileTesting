@@ -26,8 +26,8 @@ public class ModuleSteps {
     public void clickSeeAllOnThePopularCourses() {
         module.seeAll();
     }
-    @And("I click either of courses")
-    public void clickEitherOfCourses() {
+    @And("I clicked either of courses")
+    public void clickedEitherOfCourses() {
         module.eitherOfCourses();
     }
     @And("I click take courses button")
@@ -65,8 +65,8 @@ public class ModuleSteps {
     public void clickCourseButtonInTheBottom() {
         module.coursesButton();
     }
-    @And("I click either of the courses")
-    public void clickEitherOfTheCourses() {
+    @And("I clicked either of the courses")
+    public void clickEitherOfTheCourses2() {
         module.clickCourse();
     }
     @And("I click Materi {string}")

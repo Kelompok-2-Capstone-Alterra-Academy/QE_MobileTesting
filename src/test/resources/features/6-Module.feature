@@ -3,7 +3,7 @@ Feature: Module
   Scenario: Users access login and finish the courses
     Given I am already login in to application
     When I click see all on the popular courses
-    And I click either of courses
+    And I clicked either of courses
     And I click take courses button
     And I click checkout button
     And I select payment method
@@ -12,7 +12,7 @@ Feature: Module
     And I submit button in the payment
     And I view history transaction
     And I click courses button in the bottom
-    And I click either of the courses
+    And I clicked either of the courses 2
     And I click Materi "Video 1"
     And I click Materi "Tugas 1"
     And I click Materi "Materi 1"

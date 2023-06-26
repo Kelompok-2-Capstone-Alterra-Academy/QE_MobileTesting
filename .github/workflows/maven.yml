@@ -285,6 +285,46 @@
 #          recipe_uuid: ea5fda48-fa8b-48c1-8acc-07d910856141 # Google Pixel XL 8.1
 
 
+#on:
+#  push:
+#    branches:
+#      - master
+#
+#name: Genymotion Cloud SaaS
+#
+#jobs:
+#  test:
+#    name: Start Genymotion Cloud SaaS instance
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v3
+#
+#      - uses: actions/setup-python@v4
+#        with:
+#          python-version: "3.10.11"
+#
+#      - name: Set up JDK 17
+#        uses: actions/setup-java@v3
+#        with:
+#          java-version: "17"
+#          distribution: "temurin"
+#
+#      - name: Setup Android SDK
+#        uses: android-actions/setup-android@v2
+#
+#      - name: Start Genymotion Cloud SaaS instance
+#        uses: genymobile/genymotion-saas-github-action@v0.4
+#        with:
+#          email: "wiyanalta@gmail.com"
+#          password: "@Alta123"
+#          recipe_uuid: ea5fda48-fa8b-48c1-8acc-07d910856141 # Google Pixel XL 8.1
+#
+#      - name: Run Serenity Maven tests
+#        run: mvn clean verify -Pserenity
+#
+#      # Any additional steps or post-test actions can be included here
+
 on:
   push:
     branches:
@@ -312,16 +352,25 @@ jobs:
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
+        with:
+          sdk-platform: "android-11"
+          sdk-components: "platform-tools"
 
       - name: Start Genymotion Cloud SaaS instance
         uses: genymobile/genymotion-saas-github-action@v0.4
         with:
           email: "wiyanalta@gmail.com"
           password: "@Alta123"
-          recipe_uuid: ea5fda48-fa8b-48c1-8acc-07d910856141 # Google Pixel XL 8.1
+          recipe_uuid: 5e692424-5be6-4d39-8a78-9e3a60e8e7d9 # Samsung Galaxy S4 Android 11
 
-      - name: Run Serenity Maven tests
-        run: mvn clean verify -Pserenity
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+            #    - name: Build with Maven
+            #      run: mvn -B clean test
+
+      - name: Run API test
+        run: mvn clean verify
 
       # Any additional steps or post-test actions can be included here
+
 

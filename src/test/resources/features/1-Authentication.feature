@@ -45,6 +45,6 @@ Feature: Authentication
     Then I click in login button
 
   Scenario: Logout with valid data
-    Given I am already login in the application
+    Given I am already login in the applications
     When I click account button
     Then I click logout button

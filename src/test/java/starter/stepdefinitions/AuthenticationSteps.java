@@ -152,8 +152,8 @@ public class AuthenticationSteps {
     }
 
 //    Scenario: Logout with valid data
-    @Given("I am already login in the application")
-    public void alreadyLoginInTheApplication() {
+    @Given("I am already login in the applications")
+    public void alreadyLoginInTheApplications() {
         authentication.masukButton();
         authentication.loginPage();
         authentication.fillEmailField();

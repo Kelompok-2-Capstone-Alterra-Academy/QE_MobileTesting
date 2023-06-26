@@ -5,30 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f3f2734-ff5c-447d-b45e-453aea518574" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/AuthenticationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/AuthenticationSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/BookmarkSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/BookmarkSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/CompletingCourseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/CompletingCourseSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/HistorySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/HistorySteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LiveSessionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/LiveSessionSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/MentorSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/MentorSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ModuleSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ModuleSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/NewsPostSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/NewsPostSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ProfileSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/ProfileSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/QuizSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/QuizSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/SendAssignmentSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/SendAssignmentSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/TakeCourseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/starter/stepdefinitions/TakeCourseSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/1-Authentication.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/1-Authentication.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/10-Bookmark.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/10-Bookmark.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/11-NewsPost.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/11-NewsPost.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/3-TakeCourse.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/3-TakeCourse.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/4-LiveSession.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/4-LiveSession.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/5-Quiz.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/5-Quiz.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/6-Module.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/6-Module.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/7-SendAssignment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/7-SendAssignment.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/8-Mentor.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/8-Mentor.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/9-History.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/9-History.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

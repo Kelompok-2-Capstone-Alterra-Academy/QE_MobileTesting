@@ -222,9 +222,21 @@ jobs:
             emulator -avd test -no-audio -no-window &
 
       - name: Wait for emulator to start
-        uses: reactivecircus/wait-for-emulator@v2
-        with:
-          timeout: 180000 # Increase or decrease the timeout as needed
+        run: |
+          timeout=180
+          counter=0
+          boot_completed=""
+          echo "Waiting for the emulator to start..."
+          while [[ "$counter" -lt "$timeout" && "$boot_completed" != "1" ]]; do
+            sleep 1
+            counter=$((counter+1))
+            boot_completed=$(adb -e shell getprop sys.boot_completed 2>&1 | tr -d '\r')
+          done
+          if [[ "$boot_completed" != "1" ]]; then
+            echo "Timeout: Emulator did not start within the specified time."
+            exit 1
+          fi
+          echo "Emulator is ready!"
 
       - name: Run tests
         run: |
@@ -232,3 +244,4 @@ jobs:
           echo "ANDROID_HOME: $ANDROID_HOME"
           echo "PATH: $PATH"
           mvn clean verify -Pserenity
+

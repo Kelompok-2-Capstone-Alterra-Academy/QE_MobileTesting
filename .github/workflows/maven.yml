@@ -358,7 +358,7 @@ jobs:
         with:
           email: "wiyanalta@gmail.com"
           password: "@Alta123"
-          recipe_uuid: ea5fda48-fa8b-48c1-8acc-07d910856141 # Samsung Galaxy S4 Android 11
+          recipe_uuid: ea5fda48-fa8b-48c1-8acc-07d910856141 # Google Pixel XL 8.1
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml

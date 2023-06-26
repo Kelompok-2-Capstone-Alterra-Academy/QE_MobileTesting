@@ -23,7 +23,11 @@ public class AndroidDriverPool {
 //        caps.setCapability(MobileCapabilityType.NO_RESET, false);
         caps.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + File.separator + "app/app-release.apk");
 //        caps.setCapability(String.valueOf(Setting.WAIT_FOR_IDLE_TIMEOUT), 100);
-        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
+//        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
+
+//        for CICD dont delete
+        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1");
+        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Google Pixel XL");
 
         try {
             driver = new AndroidDriver(new URL(appiumUrl), caps);

@@ -14,6 +14,6 @@ Feature: Live Session
     When I clicked on the courses button in the bottom
     And I clicked either of courses
     And I clicked live session button
-    And I clicked "joined already" button
+    And I clicked "joined already" buttonn
     And I clicked "joined already class meeting" schedule
     Then Unable to join live session in course

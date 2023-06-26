@@ -34,7 +34,7 @@ public class LiveSessionSteps {
     public void clickedLiveSessionButton() {
         liveSession.liveSessionButton();
     }
-    @And("I clicked {string} button")
+    @And("I clicked {string} buttonn")
     public void clickedJoinedNoYetButton(String option) {
         if (option.equals("joined not yet")) {
             liveSession.joinedNotYetButton();

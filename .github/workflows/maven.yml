@@ -30,7 +30,7 @@ jobs:
         uses: genymobile/genymotion-saas-github-action@v0.4
         with:
           email: "callmeeyan21a@gmail.com"
-          password: "callmeeyan"
+          password: "callmeeyan21"
           recipe_uuid: 	e104f058-b291-4764-8e0d-d9ff78a41192
 
       - name: Build with Maven

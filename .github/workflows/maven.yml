@@ -437,7 +437,7 @@ jobs:
         run: |
           wget https://dl.genymotion.com/releases/genymotion-3.2.1/genymotion-3.2.1-linux_x64.bin
           chmod +x genymotion-3.2.1-linux_x64.bin
-          ./genymotion-3.2.1-linux_x64.bin --unattended --destination genymotion/
+          ./genymotion-3.2.1-linux_x64.bin --destination genymotion/
 
       - name: Build and run Serenity tests
         run: mvn clean verify -Dmaven.test.failure.ignore=true

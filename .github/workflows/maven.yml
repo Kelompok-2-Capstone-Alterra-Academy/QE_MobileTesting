@@ -358,7 +358,7 @@ jobs:
         with:
           email: "wiyanalta@gmail.com"
           password: "@Alta123"
-#          recipe_uuid: 9c03b982-544d-40bb-887d-57a2144d27fb
+          recipe_uuid: e104f058-b291-4764-8e0d-d9ff78a41192
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml

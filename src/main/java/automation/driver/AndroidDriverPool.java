@@ -23,12 +23,11 @@ public class AndroidDriverPool {
 //        caps.setCapability(MobileCapabilityType.NO_RESET, false);
         caps.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + File.separator + "app/app-release.apk");
 //        caps.setCapability(String.valueOf(Setting.WAIT_FOR_IDLE_TIMEOUT), 100);
-//        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
-
+        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
 //        for CICD dont delete
-        caps.setCapability(MobileCapabilityType.UDID, "ea5fda48-fa8b-48c1-8acc-07d910856141");
-        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1");
-        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Google Pixel XL");
+        caps.setCapability(MobileCapabilityType.UDID, "9c03b982-544d-40bb-887d-57a2144d27fb");
+//        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1");
+//        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Google Pixel XL");
 
 
 //

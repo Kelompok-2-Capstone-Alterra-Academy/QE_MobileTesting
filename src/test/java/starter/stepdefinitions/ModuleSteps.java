@@ -26,47 +26,47 @@ public class ModuleSteps {
     public void clickSeeAllOnThePopularCourses() {
         module.seeAll();
     }
-    @And("I clicked either of courses 1")
-    public void clickedEitherOfCourses1() {
+    @And("I clicked either of coursesx")
+    public void clickedEitherOfCoursesx() {
         module.eitherOfCourses();
     }
-    @And("I click take courses button 1")
-    public void clickTakeCoursesButton1() {
+    @And("I click take courses buttonx")
+    public void clickTakeCoursesButtonx() {
         module.takeCoursesButton();
     }
-    @And("I click checkout button")
-    public void clickCheckoutButton() {
+    @And("I click checkout buttonx")
+    public void clickCheckoutButtonx() {
         module.checkoutButton();
     }
-    @And("I select payment method")
-    public void selectPaymentMethod() {
+    @And("I select payment methodx")
+    public void selectPaymentMethodx() {
         module.payment();
     }
-    @And("I click pay now button")
-    public void clickPayNowButton() {
+    @And("I click pay now buttonx")
+    public void clickPayNowButtonx() {
         module.payNowButton();
     }
-    @And("I fill pin")
-    public void fillPin() {
+    @And("I fill pinx")
+    public void fillPinx() {
         module.fillPin();
     }
-    @And("I submit button in the payment")
-    public void submitButtonInThePayment() {
+    @And("I submit button in the paymentx")
+    public void submitButtonInThePaymentx() {
         module.submitButton();
         module.backPayment();
     }
-    @And("I view history transaction")
-    public void viewHistoryTransaction() {
+    @And("I view history transactionx")
+    public void viewHistoryTransactionx() {
         module.historyTransaction();
         module.viewEReceiptSuccess();
         module.backToHistoryTransaction();
     }
-    @And("I click courses button in the bottom")
-    public void clickCourseButtonInTheBottom() {
+    @And("I click courses button in the bottomx")
+    public void clickCourseButtonInTheBottomx() {
         module.coursesButton();
     }
-    @And("I clicked either of the courses 2")
-    public void clickEitherOfTheCourses2() {
+    @And("I clicked either of the coursesx")
+    public void clickEitherOfTheCoursesx() {
         module.clickCourse();
     }
     @And("I click Materi {string}")
@@ -126,8 +126,8 @@ public class ModuleSteps {
             module.finishButton5();
         }
     }
-    @And("I click quiz button")
-    public void clickQuizButton() {
+    @And("I click quiz buttonx")
+    public void clickQuizButtonx() {
         module.quizButton();
     }
     @And("I click quiz 4 {string}")
@@ -174,29 +174,29 @@ public class ModuleSteps {
             module.giveRating5();
         }
     }
-    @And("I fill review field")
-    public void fillReviewField() {
+    @And("I fill review fieldx")
+    public void fillReviewFieldx() {
         module.fillReview();
     }
-    @And("I click submit review in the button")
-    public void clickSubmitReviewInTheButton() {
+    @And("I click submit review in the buttonx")
+    public void clickSubmitReviewInTheButtonx() {
         module.submitReviewButton();
         module.recordedReview();
     }
-    @And("I click finish section")
-    public void clickFinishSection() {
+    @And("I click finish sectionx")
+    public void clickFinishSectionx() {
         module.finishSection();
     }
-    @And("I click detail finished courses")
-    public void clickDetailFinishedCourses() {
+    @And("I click detail finished coursesx")
+    public void clickDetailFinishedCoursesx() {
         module.detailFinishedCourses();
     }
-    @And("I click certificate section")
-    public void clickCertificateSection() {
+    @And("I click certificate sectionx")
+    public void clickCertificateSectionx() {
         module.certificateSection();
     }
-    @Then("I click download certificate button")
-    public void clickDownloadCertificateButton() {
+    @Then("I click download certificate buttonx")
+    public void clickDownloadCertificateButtonx() {
         module.clickDownloadCertificateButton();
         module.clickDownloadCertificateButton();
         module.clickDownloadCertificateButton();

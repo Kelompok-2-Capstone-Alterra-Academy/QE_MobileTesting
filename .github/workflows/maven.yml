@@ -365,7 +365,7 @@ jobs:
             #    - name: Build with Maven
             #      run: mvn -B clean test
 
-      - name: Run API test
+      - name: Run MOBILE test
         run: mvn clean verify
 
       # Any additional steps or post-test actions can be included here

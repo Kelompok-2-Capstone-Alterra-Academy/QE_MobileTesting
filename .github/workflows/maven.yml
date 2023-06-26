@@ -359,14 +359,19 @@ jobs:
           email: "wiyanalta@gmail.com"
           password: "@Alta123"
           recipe_uuid: e104f058-b291-4764-8e0d-d9ff78a41192
+        step:
+          run:
+          - mvn -B package --file pom.xml
+          - mvn clean verify
 
-      - name: Build with Maven
-        run: mvn -B package --file pom.xml
-            #    - name: Build with Maven
-            #      run: mvn -B clean test
 
-      - name: Run API test
-        run: mvn clean verify
+#      - name: Build with Maven
+#        run: mvn -B package --file pom.xml
+#            #    - name: Build with Maven
+#            #      run: mvn -B clean test
+#
+#      - name: Run API test
+#        run: mvn clean verify
 
       # Any additional steps or post-test actions can be included here
 

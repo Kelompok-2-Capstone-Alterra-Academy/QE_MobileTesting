@@ -325,49 +325,89 @@
 #
 #      # Any additional steps or post-test actions can be included here
 
+#on:
+#  push:
+#    branches:
+#      - master
+#
+#name: Genymotion Cloud SaaS
+#
+#jobs:
+#  test:
+#    name: Start Genymotion Cloud SaaS instance
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v3
+#
+##      - uses: actions/setup-python@v4
+##        with:
+##          python-version: "3.10.11"
+#
+#      - name: Set up JDK 17
+#        uses: actions/setup-java@v3
+#        with:
+#          java-version: "17"
+#          distribution: "temurin"
+#
+#      - name: Setup Android SDK
+#        uses: android-actions/setup-android@v2
+#
+#      - name: Start Genymotion Cloud SaaS instance
+#        uses: genymobile/genymotion-saas-github-action@v0.4
+#        with:
+#          email: "wiyanalta@gmail.com"
+#          password: "@Alta123"
+##          recipe_uuid: 9c03b982-544d-40bb-887d-57a2144d27fb
+#
+#      - name: Build with Maven
+#        run: mvn -B package --file pom.xml
+#            #    - name: Build with Maven
+#            #      run: mvn -B clean test
+#
+#      - name: Run API test
+#        run: mvn clean verify
+#
+#      # Any additional steps or post-test actions can be included here
+
+name: Integration Tests
+
 on:
   push:
     branches:
       - master
 
-name: Genymotion Cloud SaaS
-
 jobs:
-  test:
-    name: Start Genymotion Cloud SaaS instance
+  build-and-test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-#      - uses: actions/setup-python@v4
-#        with:
-#          python-version: "3.10.11"
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
+      - name: Set up Java
+        uses: actions/setup-java@v2
         with:
-          java-version: "17"
-          distribution: "temurin"
+          java-version: '11'
+          distribution: 'temurin'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v2
+      - name: Start Genymotion virtual device
+        run: |
+          # Start the Genymotion virtual device using Genymotion CLI commands
+          # Example: genymotion --version
 
-      - name: Start Genymotion Cloud SaaS instance
-        uses: genymobile/genymotion-saas-github-action@v0.4
-        with:
-          email: "wiyanalta@gmail.com"
-          password: "@Alta123"
-#          recipe_uuid: 9c03b982-544d-40bb-887d-57a2144d27fb
+      - name: Install Genymotion
+        run: |
+          wget https://dl.genymotion.com/releases/genymotion-3.2.1/genymotion-3.2.1-linux_x64.bin
+          chmod +x genymotion-3.2.1-linux_x64.bin
+          sudo ./genymotion-3.2.1-linux_x64.bin -d ~/genymotion
 
-      - name: Build with Maven
-        run: mvn -B package --file pom.xml
-            #    - name: Build with Maven
-            #      run: mvn -B clean test
+      - name: Start Genymotion virtual device
+        run: |
+          ~/genymotion/genymotion --headless --no-popup --memory 1024 --display-name "Google Pixel 2" # Adjust the virtual device settings as per your requirements
 
-      - name: Run API test
+      - name: Run integration tests
         run: mvn clean verify
 
-      # Any additional steps or post-test actions can be included here
 
 

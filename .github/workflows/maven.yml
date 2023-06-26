@@ -272,9 +272,9 @@ jobs:
         uses: genymobile/action-gmsaas@v1
         with:
 #          email: ${{ secrets.GENYMOTION_EMAIL }}
-          email: wiyanalta@gmail.com
+          email: "wiyanalta@gmail.com"
 #          password: ${{ secrets.GENYMOTION_PASSWORD }}
-          password: @Alta123
+          password: "@Alta123"
 #          license: ${{ secrets.GENYMOTION_LICENSE }}
           device: "Google Pixel 2"
           adb-server-version: "1.0.41"

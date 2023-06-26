@@ -169,12 +169,27 @@ jobs:
           sdkmanager "emulator" >/dev/null
           sdkmanager "system-images;android-29;google_apis;x86" >/dev/null
           avdmanager create avd --force --name emulator --package "system-images;android-29;google_apis;x86" --abi "google_apis/x86" --device "pixel"
-          emulator -avd emulator -no-window -no-audio -no-boot-anim -no-accel &>/dev/null &
-          android-wait-for-emulator
+          emulator -avd emulator -no-window -no-audio -no-boot-anim -no-accel &
+          echo "Waiting for the emulator to start..."
+          android-wait-for-emulator-loop
+          adb devices
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Run API test
         run: mvn clean verify
+
+      - name: Wait for emulator
+        id: wait-for-emulator
+        run: |
+          echo "Waiting for the emulator to boot up..."
+          boot_completed="no"
+          while [ "$boot_completed" != "1" ]; do
+            boot_completed=$(adb shell getprop sys.boot_completed 2>&1 | tr -d '\r')
+            sleep 1
+          done
+          echo "Emulator is ready!"
+        if: steps.wait-for-emulator.outcome == 'success'
+
 
 
 

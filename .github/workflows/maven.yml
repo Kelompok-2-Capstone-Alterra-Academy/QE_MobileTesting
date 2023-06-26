@@ -159,11 +159,11 @@ jobs:
           cache: maven
       - name: Install Android SDK
         run: |
-          wget https://dl.google.com/android/repository/commandlinetools-linux-7302050_latest.zip -O android-sdk.zip
+          wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O android-sdk.zip
           mkdir $HOME/android-sdk
-          unzip -q android-sdk.zip -d $HOME/android-sdk/cmdline-tools
+          unzip -q android-sdk.zip -d $HOME/android-sdk
           export ANDROID_SDK_ROOT=$HOME/android-sdk
-          export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/tools/bin
+          export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
           yes | sdkmanager --licenses
           sdkmanager "platforms;android-29" >/dev/null
           sdkmanager "emulator" >/dev/null
@@ -175,5 +175,6 @@ jobs:
         run: mvn -B package --file pom.xml
       - name: Run API test
         run: mvn clean verify
+
 
 

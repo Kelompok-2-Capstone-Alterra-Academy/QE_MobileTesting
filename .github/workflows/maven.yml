@@ -217,12 +217,18 @@ jobs:
           api-level: 30
           target: google_apis
           arch: x86_64
-          script: echo no | avdmanager create avd --force -n test -k "system-images;android-30;google_apis;x86_64" && emulator -avd test -no-audio -no-window
+          script: |
+            echo no | avdmanager create avd --force -n test -k "system-images;android-30;google_apis;x86_64"
+            emulator -avd test -no-audio -no-window &
 
       - name: Wait for emulator to start
         uses: reactivecircus/wait-for-emulator@v2
         with:
-          timeout: 120000 # Increase or decrease the timeout as needed
+          timeout: 180000 # Increase or decrease the timeout as needed
 
       - name: Run tests
-        run: mvn clean verify
+        run: |
+          echo "ANDROID_SDK_ROOT: $ANDROID_SDK_ROOT"
+          echo "ANDROID_HOME: $ANDROID_HOME"
+          echo "PATH: $PATH"
+          mvn clean verify -Pserenity

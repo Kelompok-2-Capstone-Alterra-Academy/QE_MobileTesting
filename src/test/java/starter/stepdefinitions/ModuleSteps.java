@@ -30,8 +30,8 @@ public class ModuleSteps {
     public void clickedEitherOfCourses1() {
         module.eitherOfCourses();
     }
-    @And("I click take courses button")
-    public void clickTakeCoursesButton() {
+    @And("I click take courses button 1")
+    public void clickTakeCoursesButton1() {
         module.takeCoursesButton();
     }
     @And("I click checkout button")

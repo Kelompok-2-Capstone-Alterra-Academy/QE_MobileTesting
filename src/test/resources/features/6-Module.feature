@@ -4,7 +4,7 @@ Feature: Module
     Given I am already login in to application
     When I click see all on the popular courses
     And I clicked either of courses 1
-    And I click take courses button
+    And I click take courses button 1
     And I click checkout button
     And I select payment method
     And I click pay now button

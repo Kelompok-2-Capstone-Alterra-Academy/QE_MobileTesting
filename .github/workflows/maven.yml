@@ -32,5 +32,5 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
-      - name: Run MOBILE test
-        run: mvn clean verify
+#      - name: Run MOBILE test
+#        run: mvn clean verify

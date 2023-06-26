@@ -147,7 +147,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -160,18 +159,12 @@ jobs:
           cache: maven
       - name: Install Android SDK
         run: |
-          sudo apt-get -y update
-          sudo apt-get -y install android-sdk
-      - name: Start Emulator
-        run: |
-          # Install required components
           wget https://dl.google.com/android/repository/commandlinetools-linux-7302050_latest.zip -O android-sdk.zip
           unzip -q android-sdk.zip -d $HOME/android-sdk
           export ANDROID_SDK_ROOT=$HOME/android-sdk
           export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
           echo "y" | sdkmanager --update
           echo "y" | sdkmanager "platforms;android-29" >/dev/null
-          echo "y" | sdkmanager "platform-tools" >/dev/null
           echo "y" | sdkmanager "emulator" >/dev/null
           echo "y" | sdkmanager "system-images;android-29;google_apis;x86" >/dev/null
           echo "no" | avdmanager --verbose create avd --force --name emulator --package "system-images;android-29;google_apis;x86" --abi "google_apis/x86" --device "pixel" >/dev/null
@@ -181,3 +174,4 @@ jobs:
         run: mvn -B package --file pom.xml
       - name: Run API test
         run: mvn clean verify
+

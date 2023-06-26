@@ -22,8 +22,8 @@ public class ModuleSteps {
         module.verifyPassword();
         module.homepage();
     }
-    @When("I click see all on the popular courses")
-    public void clickSeeAllOnThePopularCourses() {
+    @When("I click see all on the popular coursesx")
+    public void clickSeeAllOnThePopularCoursesx() {
         module.seeAll();
     }
     @And("I clicked either of coursesx")

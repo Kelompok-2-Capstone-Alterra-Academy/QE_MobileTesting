@@ -2,7 +2,7 @@ Feature: Module
 
   Scenario: Users access login and finish the courses
     Given I am already login in to application
-    When I click see all on the popular courses
+    When I click see all on the popular coursesx
     And I clicked either of coursesx
     And I click take courses buttonx
     And I click checkout buttonx

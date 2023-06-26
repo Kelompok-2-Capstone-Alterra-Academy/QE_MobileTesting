@@ -446,7 +446,7 @@
 #      - name: Stop Genymotion virtual device
 #        run: adb emu kill
 
-name: Mobile Testing
+name: Mobile Tests
 
 on:
   push:
@@ -454,17 +454,36 @@ on:
       - master
 
 jobs:
-  build-and-test:
+  build:
+
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup Maven
-        uses: maven/setup-maven@v1
-      - name: Build
-        run: mvn clean install
-      - name: Run Tests
-        run: mvn test -Ddevice=android-x86
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Set up Android SDK
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 30
+          target: default
+
+      - name: Start Emulator
+        run: |
+          emulator -avd emulator_name -no-window -no-audio &
+          android-wait-for-emulator
+
+      - name: Build and Run Mobile Tests
+        run: mvn clean verify
+
+      - name: Stop Emulator
+        run: adb emu kill
+
 
 
 

@@ -34,3 +34,5 @@ jobs:
 
       - name: Run MOBILE test
         run: mvn clean verify
+
+        #add new

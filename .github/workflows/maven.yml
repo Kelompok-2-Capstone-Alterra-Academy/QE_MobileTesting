@@ -400,7 +400,8 @@ jobs:
         run: |
           wget https://dl.genymotion.com/releases/genymotion-3.2.1/genymotion-3.2.1-linux_x64.bin
           chmod +x genymotion-3.2.1-linux_x64.bin
-          sudo ./genymotion-3.2.1-linux_x64.bin -d ~/genymotion
+          echo "y" | sudo ./genymotion-3.2.1-linux_x64.bin -d /opt/genymotion
+
 
       - name: Start Genymotion virtual device
         run: |

@@ -365,8 +365,8 @@ jobs:
             #    - name: Build with Maven
             #      run: mvn -B clean test
 
-#      - name: Run API test
-#        run: mvn clean verify
+      - name: Run API test
+        run: mvn clean verify
 
       # Any additional steps or post-test actions can be included here
 

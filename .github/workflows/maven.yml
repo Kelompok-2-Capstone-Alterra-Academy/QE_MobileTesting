@@ -73,6 +73,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      MAVEN_OPTS: "--illegal-access=permit"
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -87,10 +90,9 @@ jobs:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-maven-
-      - name: Set MAVEN_OPTS
-        run: echo "MAVEN_OPTS='--illegal-access=permit'" >> $GITHUB_ENV
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: Run API tests
         run: mvn clean verify
+
 

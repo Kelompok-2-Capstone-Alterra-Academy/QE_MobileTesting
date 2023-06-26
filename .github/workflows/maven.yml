@@ -405,7 +405,7 @@ jobs:
 
       - name: Start Genymotion virtual device
         run: |
-          /opt/genymotion/genymotion --headless --no-popup --memory 1024 --device "Samsung Galaxy S4" # Adjust the virtual device settings as per your requirements
+          /opt/genymotion/genymotion/./genymotion --headless --no-popup --memory 1024 --device "Samsung Galaxy S4" # Adjust the virtual device settings as per your requirements
 
       - name: Run integration tests
         run: mvn clean verify

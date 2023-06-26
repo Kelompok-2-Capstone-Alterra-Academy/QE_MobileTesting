@@ -29,6 +29,8 @@ public class AndroidDriverPool {
         caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1");
         caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Google Pixel XL");
 
+//
+
         try {
             driver = new AndroidDriver(new URL(appiumUrl), caps);
             driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);

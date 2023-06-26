@@ -411,7 +411,42 @@
 #      - name: Run integration tests
 #        run: mvn clean verify
 
-name: Android CI
+#name: Android CI
+#
+#on:
+#  push:
+#    branches:
+#      - master
+#
+#jobs:
+#  build:
+#
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Checkout repository
+#        uses: actions/checkout@v2
+#
+#      - name: Set up Java
+#        uses: actions/setup-java@v2
+#        with:
+#          java-version: '11'
+#          distribution: 'temurin'
+#
+#      - name: Set up Genymotion
+#        run: |
+#          wget https://dl.genymotion.com/releases/genymotion-3.2.1/genymotion-3.2.1-linux_x64.bin
+#          chmod +x genymotion-3.2.1-linux_x64.bin
+#          yes | ./genymotion-3.2.1-linux_x64.bin --destination genymotion/
+#
+#
+#      - name: Build and run Serenity tests
+#        run: mvn clean verify -Dmaven.test.failure.ignore=true
+#
+#      - name: Stop Genymotion virtual device
+#        run: adb emu kill
+
+name: Mobile Testing
 
 on:
   push:
@@ -419,31 +454,18 @@ on:
       - master
 
 jobs:
-  build:
-
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - name: Setup Maven
+        uses: maven/setup-maven@v1
+      - name: Build
+        run: mvn clean install
+      - name: Run Tests
+        run: mvn test -Ddevice=android-x86
 
-      - name: Set up Java
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
-          distribution: 'temurin'
-
-      - name: Set up Genymotion
-        run: |
-          wget https://dl.genymotion.com/releases/genymotion-3.2.1/genymotion-3.2.1-linux_x64.bin
-          chmod +x genymotion-3.2.1-linux_x64.bin
-          ./genymotion-3.2.1-linux_x64.bin --destination genymotion/
-
-      - name: Build and run Serenity tests
-        run: mvn clean verify -Dmaven.test.failure.ignore=true
-
-      - name: Stop Genymotion virtual device
-        run: adb emu kill
 
 
 

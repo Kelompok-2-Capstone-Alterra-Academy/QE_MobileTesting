@@ -29,9 +29,9 @@ jobs:
       - name: Start Genymotion Cloud SaaS instance
         uses: genymobile/genymotion-saas-github-action@v0.4
         with:
-          email: "wiyanalta@gmail.com"
-          password: "@Alta123"
-          recipe_uuid: e104f058-b291-4764-8e0d-d9ff78a41192
+          email: "callmeeyan21a@gmail.com"
+          password: "callmeeyan"
+          recipe_uuid: 	e104f058-b291-4764-8e0d-d9ff78a41192
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
